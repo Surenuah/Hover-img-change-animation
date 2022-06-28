@@ -28,7 +28,6 @@ const products = [
 let chosenProduct = products[0];
 const paymentMethodsItem =document.querySelectorAll(".payment-methods__item");
 const currentProductImg = document.querySelector(".payment-methods__img");
-const active = document.querySelectorAll(".payment-methods__item_active")
 
 paymentMethodsItem.forEach((item, index) => {
     item.addEventListener("mouseenter", (e) => {
