@@ -35,13 +35,12 @@ paymentMethodsItem.forEach((item, index) => {
         chosenProduct = products[index];
         currentProductImg.src = chosenProduct.img;
 
+        const active = document.querySelectorAll(".payment-methods__item_active");
+        active.forEach(element => {
+            element.classList.remove("payment-methods__item_active");
+        });
+
         // adding active class
         e.target.classList.add("payment-methods__item_active");
     });
 });
-
-paymentMethodsItem.forEach((item) => {
-    item.addEventListener("mouseleave", (e) => {
-        e.target.classList.remove("payment-methods__item_active");
-    })
-})
